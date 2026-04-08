@@ -1,0 +1,25 @@
+# Target
+target/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# Benchmark comparisons
+benches/
+
+# Build
+*.exe
+*.pdb
