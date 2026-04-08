@@ -1,9 +1,15 @@
 [package]
 name = "quantum-shor"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
-authors = ["Quantum Team"]
-description = "Quantum Shor Algorithm for Blockchain Security Audit"
+authors = ["Quantum Team <quantum@example.com>"]
+description = "Quantum Shor Algorithm for Blockchain Security Audit - A Rust implementation for testing blockchain vulnerability to quantum attacks"
+license = "MIT"
+repository = "https://github.com/quantum-team/quantum-shor"
+documentation = "https://docs.rs/quantum-shor"
+readme = "README.md"
+keywords = ["quantum", "shor", "blockchain", "cryptography", "security"]
+categories = ["cryptography", "algorithms", "simulation"]
 
 [dependencies]
 rand = "0.8"
@@ -20,7 +26,15 @@ criterion = "0.5"
 name = "shor_benchmark"
 harness = false
 
+[features]
+default = ["std"]
+std = []
+
 [profile.release]
 opt-level = 3
 lto = true
 codegen-units = 1
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--generate-link-to-definition"]
